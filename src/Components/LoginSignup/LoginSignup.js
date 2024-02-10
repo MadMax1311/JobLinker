@@ -28,7 +28,7 @@ function LoginSignup() {
       alert("Enter Password");
     } else {
       axios
-        .post("http://localhost:8080/login", {
+        .post("http://localhost:5000/login", {
           email: email,
           password: password,
         })
@@ -56,7 +56,7 @@ function LoginSignup() {
       alert("Passwords do not matched!");
     } else {
       axios
-        .post("http://localhost:8080/signup", {
+        .post("http://localhost:5000/signup", {
           email: email,
           password: password,
           confirmpassword: confirmpassword,

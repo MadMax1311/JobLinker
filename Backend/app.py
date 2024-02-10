@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify, session
 from flask_bcrypt import Bcrypt
-from config import ApplicationConfig
-from Database import db, User
+from Backend.config import ApplicationConfig
+from Backend.models import db, User
+from Backend.Scrapping.Fetch_Job import FetchJobs 
 from flask_session import Session
 from flask_cors import CORS
+import pathlib
 
 app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
@@ -89,6 +91,31 @@ def login_user():
     })
     
 
+@app.route("/get_jobs", methods = ["POST"])
+def submit_job_search():
+    
+    # get the current user id
+    curr_user = get_current_user()
+    user_id = curr_user['id']
+    
+    # Extract job role and location from the form data
+    data = request.get_json()
+    job_role = data['job_role']
+    job_location = data['job_location']
+    
+    # Initialize the job scraper and fetch jobs
+    scrapper = FetchJobs()
+    scrapper.role = job_role
+    scrapper.location = job_location
+    jobs = scrapper.fetch_jobs()
+    
+    file = request.files['file']
+    path = pathlib.Path().absolute()
+    resume = f'{path}/Resumes/{user_id}.pdf'
+    file.save(resume)
+    
+    return { "details" : jobs } 
+    
      
 if __name__ == '__main__':
-    app.run(debug=True,  )
+    app.run(debug=True)
