@@ -25,12 +25,14 @@
       .logo {
         color: var(--whiteColor);
         font-weight: 500;
+        font-size: 20px;
         cursor: pointer;
         align-items: center;
         justify-content: center;
 
         .fl{
           color: #1C8C98;
+          font-size: 30px;
         }
 
         .icon {
