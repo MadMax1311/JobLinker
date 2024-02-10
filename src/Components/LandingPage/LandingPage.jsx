@@ -3,10 +3,10 @@ import "./landingpage.css";
 import img from "../../Assets/Home_Bg.png"
 import { FaUpload } from "react-icons/fa";
 import LandingNavbar from "./LandingNavbar";
-import Offers from '../Offers/Offers'
+import Job from '../Job/Job'
 // / / import Popular from './Components/Popular/Popular'
 import About from '../About/About'
-import Blog from '../Blog/Blog'
+import Aboutus from '../Aboutus/Aboutus'
 import Footer from '../Footer/Footer'
 import { useNavigate } from "react-router-dom";
 import Aos from 'aos'
@@ -84,8 +84,8 @@ const LandingPage = () => {
         </div>
       </div>
     </section>
-    <Offers/>
-    <Blog/>
+    <Job/>
+    <Aboutus/>
     <About/>
   <Footer/> 
     </>
