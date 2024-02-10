@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 // import { MdMarkEmailRead } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { IoReorderThreeOutline } from "react-icons/io5";
-import { Link as Boom } from 'react-router-dom';
+import { Link as Code } from 'react-router-dom';
 import { FaRegUser } from "react-icons/fa";
 
 const Navbar = () => {
@@ -81,14 +81,14 @@ const Navbar = () => {
                     <div className='btn loginBtn'>
                         {/* <a href='#'>Login</a> */}
                         <FaRegUser />
-                        {/* <Boom to='/login'>Login</Boom> */}
+                        {/* <Code to='/login'>Login</Code> */}
                         
                     </div>
 
                     {/* <button className='btn loginBtn'>
                         <Link to='/login'>Sign Up</Link>
                         
-                        <Boom to='/login'>Sign  Up</Boom>
+                        <Code to='/login'>Sign  Up</Code>
                     </button> */}
                 </div>
                 

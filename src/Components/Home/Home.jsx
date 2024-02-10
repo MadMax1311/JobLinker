@@ -4,7 +4,7 @@ import img from "../../Assets/Home_Bg.png"
 import { FaUpload } from "react-icons/fa";
 import { Link } from 'react-scroll';
 import Navbar from "../Navbar/Navbar";
-import Offers from '../Offers/Offers'
+import Job from '../Job/Job'
 // / / import Popular from './Components/Popular/Popular'
 import About from '../About/About'
 import Aboutus from '../Aboutus/Aboutus'
@@ -105,13 +105,13 @@ const Home = () => {
       </div>
     </section>
     {submitted && (
-        <Offers
+        <Job
           jobRole={jobRole}
           jobLocation={jobLocation}
           fetchData={fetchData}
         />
       )}
-    {/* <Offers/> */}
+    {/* <Job/> */}
     <Aboutus/>
     <About/>
     <Footer/> 
