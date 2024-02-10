@@ -4,6 +4,7 @@ import { MdLocalPostOffice } from "react-icons/md";
 import { GiOfficeChair } from "react-icons/gi";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { FaLocationDot } from "react-icons/fa6";
+import { AiFillCloseCircle } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 // import img1 from '../../Assets/im1.jpeg'
 // import img2 from '../../Assets/im2.png'
@@ -23,8 +24,22 @@ const Job = ({ jobRole, jobLocation }) => {
     job_location: jobLocation ?? "",
   };
 
-  const [jobData, setJobData] = useState([]);
+  
 
+  const [jobData, setJobData] = useState([]);
+ 
+ 
+ 
+  const [modal, setModal] = useState(false);
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if(modal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
 
   useEffect(()=>{
     // Aos.init({duration: 2000})
@@ -111,6 +126,12 @@ const Job = ({ jobRole, jobLocation }) => {
 
         <div className="mainContent">
         {jobData.map((job) => {
+
+          
+  const handleButtonClick = () => {
+    toggleModal();
+    handleGenerateEmail(job["Job URL"]);
+  };
             return (
               <div
                 // key={index}
@@ -147,7 +168,9 @@ const Job = ({ jobRole, jobLocation }) => {
 
                   <button
                     className="btn flex"
-                    onClick={() => handleGenerateEmail(job["Job URL"])}
+                    // onClick={() => {toggleModal;
+                    // handleGenerateEmail(job["Job URL"])}}
+                    onClick={handleButtonClick}
                   >
                     Generate E-mail
                   </button>
@@ -157,6 +180,30 @@ const Job = ({ jobRole, jobLocation }) => {
           })}
         </div>
       </div>
+
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <div>
+            <h2 className='hading'>E-mail</h2>
+            </div>
+            <hr />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              perferendis suscipit officia recusandae, eveniet quaerat assumenda
+              id fugit, dignissimos maxime non natus placeat illo iusto!
+              Sapiente dolorum id maiores dolores? Illum pariatur possimus
+              quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
+              placeat tempora vitae enim incidunt porro fuga ea.
+            </p>
+            <button className="close-modal" onClick={toggleModal}>
+            <AiFillCloseCircle className='icon' />
+            </button>
+          </div>
+        </div>
+      )}
+
     </section>
   )
 }
