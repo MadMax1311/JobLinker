@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, session
 from flask_bcrypt import Bcrypt
-from config import ApplicationConfig
-from Database import db, User
+from Backend.config import ApplicationConfig
+from Backend.models import db, User
 from flask_session import Session
 from flask_cors import CORS
 
@@ -91,4 +91,4 @@ def login_user():
 
      
 if __name__ == '__main__':
-    app.run(debug=True,  )
+    app.run(debug=True )
