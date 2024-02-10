@@ -6,7 +6,7 @@ import LandingNavbar from "./LandingNavbar";
 import Offers from '../Offers/Offers'
 // / / import Popular from './Components/Popular/Popular'
 import About from '../About/About'
-import Blog from '../Blog/Blog'
+import Aboutus from '../Aboutus/Aboutus'
 import Footer from '../Footer/Footer'
 import { useNavigate } from "react-router-dom";
 import Aos from 'aos'
@@ -47,8 +47,8 @@ const LandingPage = () => {
           <h1 data-aos="fade-up"  className="title">Place your Job role & <br />Generate E-mail</h1>
 
           <p data-aos="fade-up" data-aos-duration="4000" className="subTitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
-            perferendis.
+          Job Linker is a streamlined web application that revolutionizes the job 
+          application process by focusing on personalized email generation
           </p>
 
           <button data-aos="fade-up" data-aos-duration="3000" className="btn">
@@ -85,7 +85,7 @@ const LandingPage = () => {
       </div>
     </section>
     <Offers/>
-    <Blog/>
+    <Aboutus/>
     <About/>
   <Footer/> 
     </>
