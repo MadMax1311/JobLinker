@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# JobLinker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Job Linker is an innovative platform that streamlines the job search process by integrating personalized email communication with job listings. It offers users the ability to receive tailored job recommendations based on their preferences, and facilitates easy application through a unique email-based system.
 
-## Available Scripts
+# Key Features
 
-In the project directory, you can run:
+1. Personalized Job Recommendations:
+   - Users can input job role, preferred job location, and other relevant criteria.
+     The backend processes this information to curate a list of job recommendations tailored to the user's preferences.
+2. Email Integration:
+   - Job Linker utilizes email as a primary communication channel, providing a familiar and accessible way for users to interact with the platform.
+     Users receive a periodic email containing a curated list of jobs that match their specified criteria.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation Modules for the run of the react app
+1. These components allow you to set up routing in your React application.
+      ```bash
+      npm install react-router-dom
+2. This command will download and install the react-scroll package and its dependencies into your project's node_modules directory.
+     ```bash
+     npm install react-scroll
+3. fontawesome provides a React component for using Font Awesome icons, and @fortawesome/free-solid-svg-icons contains the free solid icons from Font Awesome.
+    ```bash
+    npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+4. This command will download and install the Axios library and its dependencies into your project's node_modules directory.
+    ```bash
+    npm install axios
+5. AOS will automatically trigger animations when elements come into view as the user scrolls the page.
+    ```bash
+    npm install aos --save
+   
+## Run the react-app
+1. npm start, the development server should start, and your default web browser should automatically open to http://localhost:3000.
+   ```bash
+    npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Run the Backend-app
+1. The command python -m Backend.app seems to be attempting to run a Python module named app located within a package named Backend.
+     ```bash
+    python -m Backend.app
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### About us
+JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and promote independence for all users.
