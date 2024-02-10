@@ -8,15 +8,15 @@
     --greyBg: hsl(0, 0%, 96%);
     --greyText: rgb(190, 190, 190);
     --inputColor: hsl(330, 12%, 97%);
-  }
-  
-  .home{
+}
+
+.home{
     height: 80vh;
     /* background: linear-gradient(rgba(33,33,33,0.522), rgba(33,33,33,0.522)), url('../../Assets/free-photo-black-grunge-abstract-background-pattern-wallpaper.jpg'); */
     /* background-image: linear-gradient(to right, #2d2a2e, #242326, #1c1c1e, #141516, #0a0b0c); */
     /* background-image: linear-gradient(to right bottom, #1f1f1f, #1f1f1f, #1f1f1f, #1f1f1f, #1f1f1f); */
     background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000);
-  
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,29 +25,29 @@
     justify-content: center;
     margin: auto;
     position: relative;
-  
+
     .img{
         position: relative;
-        height: 550px;
-        width: 800px;
+        height: 500px;
+        width: 750px;
         left: 1000px;
     }
     .secContainer{
-  
+
         .homeText{
             text-align: start;
             position: relative;
             /* padding-top: 100px; */
             /* top: 50%; */
             left: -600px;
-  
+
             .title{
                 color: var(--whiteColor);
                 font-size: 2rem;
                 font-weight: 700;
                 line-height: 2.5rem;
             }
-  
+
             .subTitle{
                 color: var(--whiteColor);
                 opacity: .9;
@@ -57,12 +57,12 @@
                 max-width: 70%;
                 text-align: start;
             }
-  
+
             .btn{
                 padding: .6rem 1.5rem;
             }
         }
-  
+
         .homeCard{
             width: 80%;
             border-radius: 1rem;
@@ -75,10 +75,10 @@
             transform: translate(-50%);
             left: 50%;
             box-shadow: 0 2px 8px 4px rgba(178,178,178,0.45);
-  
+
             .locationDiv, .distDiv, .priceDiv{
                 width: 100%;
-  
+
                 label{
                     display: block;
                     color: black;
@@ -86,7 +86,7 @@
                     font-size: 18px;
                     padding-bottom: .4rem;
                 }
-  
+
                 input[type = 'file']{
                     display: none;
                 }
@@ -107,7 +107,7 @@
                     padding: 10px;
                     font-size: 13px;
                     font-weight: 700;
-  
+
                     &::placeholder{
                         font-size: 13px;
                         /* opacity: ; */
@@ -119,7 +119,7 @@
                     }
                 }
             }
-  
+
             .btn{
                 width: 100%;
                 padding: .6rem 1.5rem;
@@ -128,9 +128,9 @@
             }
         }
     }
-  }
-  
-  @media screen and (min-width: 480px){
+}
+
+@media screen and (min-width: 480px){
     .home{
         .secContainer{
             .homeCard{
@@ -144,9 +144,9 @@
         }
     }
     
-  }
-  
-  @media screen and (min-width: 556px){
+}
+
+@media screen and (min-width: 556px){
     .home{
         .secContainer{:root{
             --PrimaryColor:hsl(186, 69%, 44%);
@@ -275,7 +275,7 @@
                     .homeText{
                         .title{
                             font-size: 2.5rem;
-  
+
                             }
                     }
                 }
@@ -303,28 +303,26 @@
             }
         }
     }   
-  }
-  
-  @media screen and (min-width: 720px){
+}
+
+@media screen and (min-width: 720px){
     .home{
         .secContainer{
             .homeCard{
                bottom: -10%;
                grid-template-columns: repeat(4, 1fr);
-  
+
             }
         }
     }
-  }
-  
-  @media screen and (min-width: 720px){
+}
+
+@media screen and (min-width: 720px){
     .home{
         .secContainer{
             .homeText{
-                padding: -1rem 10rem ;
-                margin-right: -330px;
-                font-size: 1.5rem;
-  
+                padding: 1rem 10rem ;
+
                 .title{
                     font-size: 3.5rem ;
                     margin: auto;
@@ -336,9 +334,9 @@
             }
         }
     } 
-  }
-  
-  @media screen and(min-width: 1024px) {
+}
+
+@media screen and(min-width: 1024px) {
     .home{
         .secContainer{
             .subTitle{
@@ -349,4 +347,4 @@
             width: 70%;
         }
     }
-  }
+}
