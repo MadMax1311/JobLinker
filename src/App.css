@@ -1,3 +1,20 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: .3s ease;
+}
+
+
+:root{
+  --primaryColor: hsl(186, 69%, 44%);
+  --hoverColor: 	hsl(186, 69%, 35%);
+  --backGround: 	hsl(186, 69%, 44%);
+  --textColor: hsl(186, 69%, 44%);
+  --buttonColor: hsl(186, 69%, 44%);
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +53,147 @@
     transform: rotate(360deg);
   }
 }
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #23b0bf; 
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+}
+
+.btn{
+    padding: .4rem 1.5rem;
+    background:  #23b0bf;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btn a{
+    color: var(--whiteColor);
+    font-weight: 500;
+}
+
+.btn:hover{
+    background:#1C8C98;
+}
+.btn:hover a{
+    color: var(--whiteColor);
+}
+
+.secIntro{
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto 2rem;
+}
+
+.secIntro .secTitle{
+    color: #23b0bf;
+    line-height: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.secIntro p{
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+}
+
+img, video{
+    width: 100%;
+    height: auto;
+}
+
+input{
+    font-size: 100%;
+}
+
+@media screen and (min-width: 556px){
+    .mainContent, .singlePost{
+        grid-template-columns: repeat(2,1fr);
+    }  
+    
+}
+
+@media screen and (min-width: 884px){
+    .mainContent{
+        grid-template-columns: repeat(3,1fr);
+    }   
+}
+@media screen and (min-width: 1240px){
+    .container{
+        width: 75% !important;
+        margin: auto !important;
+    }  
+    
+    .section{
+        padding: 5rem 0 3rem;
+    }
+
+    .secIntro{
+        margin: 0 auto 3rem;
+    }
+
+    .secIntro .secTitle{
+        line-height: 2rem;
+        padding-bottom: 1rem;
+        font-size: 2.2rem;
+    }
+
+    .secIntro p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body{
+        zoom: 1.7;
+    }
+}
+
+::selection{
+    background: #23b0bf;
+    color: var(--whiteColor);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--greyBg);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #23b0bf;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
