@@ -41,4 +41,4 @@ Job Linker is an innovative platform that streamlines the job search process by 
     python -m Backend.app
 
 ### About us
-JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and promote independence for all users.
+JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and help all users for generate E-mail.
