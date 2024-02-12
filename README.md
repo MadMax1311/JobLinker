@@ -5,7 +5,7 @@
 
 **JobLinker** is an innovative platform that streamlines the job search process by integrating personalized email communication with job listings. It allows users to generate emails tailored to specific industries or companies of interest. Simply select the industry or company you're interested in, generate the email, review it, make any necessary changes and copy it. Then, send the AI-generated email to the HR manager. Congratulations on securing the interview! 🎉🎉 
 
-# Key Features
+## Key Features
 
 1. Personalized Job Recommendations:
    - Users can input job role, preferred job location, and other relevant criteria.
@@ -42,7 +42,7 @@
    ```bash
     npm start
 
-### Run Backend 
+## Run Backend 
 
 1. Install all the dependencies
      ```bash
@@ -58,23 +58,23 @@ Note : In case some module not install you have to install it manually.
 
 Note: The command "python -m Backend.app" seems to be attempting to run a Python module named app located within a package named Backend.
 
-### Tach Stack
+## Tach Stack
 
-#### Frontend
-**JavaScript Framework/Library:** React.js
-**Styling:** CSS, Sass
-**State Management:** Redux
-**Routing:** React Router
-**HTTP Requests:** Axios
-**Package Manager:** npm
-**Animation Library:** AOS (Animate on Scroll)
+### Frontend
+- **JavaScript Framework/Library:** React.js
+- **Styling:** CSS, Sass
+- **State Management:** Redux
+- **Routing:** React Router
+- **HTTP Requests:** Axios
+- **Package Manager:** npm
+- **Animation Library:** AOS (Animate on Scroll)
 
-#### Backend 
-**Framework:** Flask
-**Database:** SQLAlchemy
-**Web Scraping:** BeautifulSoup, requests
-**OCR (Optical Character Recognition):** pdfminer-six
-**API Documentation:** OpenAPI
+### Backend 
+- **Framework:** Flask
+- **Database:** SQLAlchemy
+- **Web Scraping:** BeautifulSoup, requests
+- **OCR (Optical Character Recognition):** pdfminer-six
+- **API Documentation:** OpenAPI
 
-### About us
+## About us
 JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and help all users for generate E-mail.
