@@ -24,10 +24,8 @@ class email_generation:
             }]
         )
         text_message = response.choices[0].message.content.strip()
-        print(text_message)
         
         modified_text_message = text_message.replace("'", '"')
-        modified_text_message = modified_text_message.replace('\n',' ')
         
         email_disc = json.loads(modified_text_message)
         email_disc['body'] = email_disc['body'].replace('\n',' ')
