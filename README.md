@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# JobLinker
+![image](https://github.com/MadMax1311/JobLinker/assets/134824444/30f516da-fb56-4b6b-8f3d-f83d7d6eab03)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+**JobLinker** is an innovative platform that streamlines the job search process by integrating personalized email communication with job listings. It allows users to generate emails tailored to specific industries or companies of interest. Simply select the industry or company you're interested in, generate the email, review it, make any necessary changes and copy it. Then, send the AI-generated email to the HR manager. Congratulations on securing the interview! 🎉🎉 
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+1. Personalized Job Recommendations:
+   - Users can input job role, preferred job location, and other relevant criteria.
+     The backend processes this information to curate a list of job recommendations tailored to the user's preferences.
+     
+2. Email Integration:
+   - Job Linker utilizes email as a primary communication channel, providing a familiar and accessible way for users to interact with the platform.
+     Users receive a periodic email containing a curated list of jobs that match their specified criteria.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. These components allow you to set up routing in your React application.
+      ```bash
+      npm install react-router-dom
+      
+2. This command will download and install the react-scroll package and its dependencies into your project's node_modules directory.
+     ```bash
+     npm install react-scroll
+     
+3. fontawesome provides a React component for using Font Awesome icons, and @fortawesome/free-solid-svg-icons contains the free solid icons from Font Awesome.
+    ```bash
+    npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+    
+4. This command will download and install the Axios library and its dependencies into your project's node_modules directory.
+    ```bash
+    npm install axios
+    
+5. AOS will automatically trigger animations when elements come into view as the user scrolls the page.
+    ```bash
+    npm install aos --save
+   
+## Run the react-app
+1. npm start, the development server should start, and your default web browser should automatically open to http://localhost:3000.
+   ```bash
+    npm start
 
-### `npm test`
+## Run Backend 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install all the dependencies
+     ```bash
+   pip install requirements.txt
+Note : In case some module not install you have to install it manually.
 
-### `npm run build`
+2. Install the redis, you can install it from our git repo itself 
+   [@chetan](https://github.com/amMistic)
+   
+3. To run the Backend sever, run the given command in you terminal
+     ```bash
+    python -m Backend.app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: The command "python -m Backend.app" seems to be attempting to run a Python module named app located within a package named Backend.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tach Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
+- **JavaScript Framework/Library:** React.js
+- **Styling:** CSS, Sass
+- **State Management:** Redux
+- **Routing:** React Router
+- **HTTP Requests:** Axios
+- **Package Manager:** npm
+- **Animation Library:** AOS (Animate on Scroll)
 
-### `npm run eject`
+### Backend 
+- **Framework:** Flask
+- **Database:** SQLAlchemy
+- **Web Scraping:** BeautifulSoup, requests
+- **OCR (Optical Character Recognition):** pdfminer-six
+- **API Documentation:** OpenAPI
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## About us
+JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and help all users for generate E-mail.
