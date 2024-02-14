@@ -12,6 +12,7 @@ import Footer from '../Footer/Footer'
 // import { useNavigate } from "react-router-dom";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+// import
 
 
 const Home = () => {
