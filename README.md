@@ -1,5 +1,8 @@
 # JobLinker
-![image](https://github.com/MadMax1311/JobLinker/assets/134824444/30f516da-fb56-4b6b-8f3d-f83d7d6eab03)
+
+
+https://github.com/MadMax1311/JobLinker/assets/123349721/ad76f129-8fd0-45d1-ad7c-22d92d658032
+
 
 ## Overview
 
