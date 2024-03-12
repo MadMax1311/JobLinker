@@ -6,7 +6,7 @@ https://github.com/MadMax1311/JobLinker/assets/123349721/ad76f129-8fd0-45d1-ad7c
 
 ## Overview
 
-**JobLinker** is an innovative platform that streamlines the job search process by integrating personalized email communication with job listings. It allows users to generate emails tailored to specific industries or companies of interest. Simply select the industry or company you're interested in, generate the email, review it, make any necessary changes and copy it. Then, send the AI-generated email to the HR manager. Congratulations on securing the interview! 🎉🎉 
+**JobLinker** is an innovative platform that streamlines the job search process by integrating personalized email communication with job listings. It allows users to generate emails tailored to specific industries or companies of interest. Simply select the industry or company you're interested in, generate the email, review it, make any necessary changes and copy it. Then, send the generated email to the HR manager. Congratulations on securing the interview! 🎉🎉 
 
 ## Key Features
 
