@@ -14,7 +14,7 @@ https://github.com/MadMax1311/JobLinker/assets/123349721/ad76f129-8fd0-45d1-ad7c
    - Users can input job role, preferred job location, and other relevant criteria.
      The backend processes this information to curate a list of job recommendations tailored to the user's preferences.
      
-2. Email Integration:
+2. Email Integration: 
    - Job Linker utilizes email as a primary communication channel, providing a familiar and accessible way for users to interact with the platform.
      Users receive a periodic email containing a curated list of jobs that match their specified criteria.
 
