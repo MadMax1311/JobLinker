@@ -68,7 +68,7 @@ const About = () => {
           <div data-aos="fade-right" data-aos-duration="2000" className="cardText">
             <h2>Demo video</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsum ipsam accusamus velit quasi quos sed consectetur iste beatae, eos nulla quam eius deserunt dolorum repudiandae a ducimus porro nam!
+              We are helping here to find jobs and easy to create a new job opportunity
             </p>
 
           </div>
