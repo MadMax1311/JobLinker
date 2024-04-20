@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState , FC} from 'react'
 import './job.css'
-import { MdLocalPostOffice } from "react-icons/md";
-import { GiOfficeChair } from "react-icons/gi";
+import { FaBusinessTime } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
-import { FaLocationDot } from "react-icons/fa6";
+import { GiFlexibleLamp } from "react-icons/gi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 // import img1 from '../../Assets/im1.jpeg'
@@ -13,27 +12,69 @@ import { BsArrowRight } from "react-icons/bs";
 // import img from '../../Assets/4.jpeg'
 // import img from '../../Assets/5.jpeg'
 
-
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-const Job = ({ jobRole, jobLocation }) => {
+const Job = ({ jobRole, jobLocation ,selectedFil,fetchData}) => {
   const api_url = "http://localhost:5000/get_jobs";
   const create_row_data = {
     job_role: jobRole ?? "",
     job_location: jobLocation ?? "",
   };
 
-  
+function CopyButton({ text }) {
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert('Text copied to clipboard!');
+    } catch (error) {
+      console.error('Failed to copy:', error);
+    }
+  };
+
+  return (
+    <button onClick={copyToClipboard}>Copy</button>
+  );
+}
 
   const [jobData, setJobData] = useState([]);
+  // const [modal, setModal] = useState(false);
+  const [emailDetails, setEmailDetails] = useState(null);
  
  
+  // const CopyToClipboard = ({ textData }) => {
+  //   const [copied, setcopied] = useState(false);
+  
+  //   const copyToClipboard = () => {
+  //     setcopied(true);
+  
+  //     navigator.clipboard.writeText(textData).then(
+  //       () => {
+  //         // console.log('copied');
+  //       },
+  //       (err) => {
+  //         console.error(err);
+  //       }
+  //     );
+  
+  //     setTimeout(() => {
+  //       setcopied(false);
+  //     }, 500);
+  //   };
+
  
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
     setModal(!modal);
   };
+  
+  
+
+
+
+ 
+
+
 
   if(modal) {
     document.body.classList.add('active-modal')
@@ -101,12 +142,16 @@ const Job = ({ jobRole, jobLocation }) => {
         throw new Error("Network response was not ok");
       }
 
-      const result = await response.json();
-      console.log(result);
+      const email = await response.json();
+      const newemail = email.email;
+      setEmailDetails(newemail);
+      console.log(newemail);
     } catch (error) {
       console.error("Error generating email:", error);
     }
   };
+
+  
 
   return (
     <section className='offer container section'>
@@ -132,6 +177,7 @@ const Job = ({ jobRole, jobLocation }) => {
     toggleModal();
     handleGenerateEmail(job["Job URL"]);
   };
+
             return (
               <div
                 // key={index}
@@ -146,7 +192,7 @@ const Job = ({ jobRole, jobLocation }) => {
 
                   <div className="amenities flex">
                     <div className="singleAmenity">
-                      <MdLocalPostOffice className="icon" />
+                      <FaBusinessTime  className="icon" />
                       <p>Date: {job.Date}</p>
                     </div>
 
@@ -156,13 +202,13 @@ const Job = ({ jobRole, jobLocation }) => {
                     </div>
 
                     <div className="singleAmenity">
-                      <MdLocalPostOffice className="icon" />
+                      <FaBusinessTime Office className="icon" />
                       <p>Experience: {job.Experience}</p>
                     </div>
                   </div>
 
                   <div className="location flex">
-                    <FaLocationDot className="icon" />
+                    <GiFlexibleLamp className="icon" />
                     <p>Job Role: {job["Job Role"]}</p>
                   </div>
 
@@ -189,24 +235,61 @@ const Job = ({ jobRole, jobLocation }) => {
             <h2 className='hading'>E-mail</h2>
             </div>
             <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              perferendis suscipit officia recusandae, eveniet quaerat assumenda
-              id fugit, dignissimos maxime non natus placeat illo iusto!
-              Sapiente dolorum id maiores dolores? Illum pariatur possimus
-              quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-              placeat tempora vitae enim incidunt porro fuga ea.
-            </p>
+            {emailDetails ? (
+              <>
+                <p>
+                   {emailDetails.sender_name}
+                </p>
+                <p>
+                   {emailDetails.sender_email}
+                </p>
+                <p>
+                  {emailDetails.subject}
+                </p>
+                <p>
+                   {emailDetails.salutation}
+                </p>
+                <p>
+                   {emailDetails.body}
+                </p>
+              </>
+            ) : (
+              <p> <b>Subject: Application for Web Developer Position - Nikunj Rameshbhai Makwana</b>
+              <br />
+                <br />
+
+              Dear HR Manager,
+
+              <br />
+              <br />
+              
+              I trust this email finds you well. My name is Nikunj Rameshbhai Makwana, and I am writing to express my sincere interest in the Web Developer position at [Company Name] in Pune, as recently advertised. With a strong background in web development and a passion for creating innovative and user-friendly websites, I am confident in my ability to contribute effectively to your dynamic team.
+              <br />
+              <br />
+              I have attached my resume, which provides a comprehensive overview of my skills, experience, and projects. Having worked on various web development projects, I have honed my proficiency in HTML, CSS, JavaScript, React.js, Nodejs, enabling me to deliver high-quality solutions tailored to meet the specific needs of clients and users.
+              <br />
+              <br />
+              I am particularly drawn to [Company Name] because of its reputation for fostering creativity and embracing cutting-edge technologies in the field of [mention any specific industry or sector focus]. I am eager to bring my technical expertise and collaborative mindset to contribute to the continued success of your projects.
+              <br />
+              <br />
+              Thank you for considering my application. I look forward to the possibility of contributing to the success of [Company Name] and being a valuable member of your team.
+              <br />
+              <br />
+              Sincerely,
+              <br />
+              
+              Nikunj Rameshbhai Makwana
+              </p>
+            )}
             <button className="close-modal" onClick={toggleModal}>
             <AiFillCloseCircle className='icon' />
             </button>
           </div>
         </div>
+
+        
       )}
-
     </section>
-  )
-}
-
+  )}
 
 export default Job;
