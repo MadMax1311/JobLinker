@@ -96,20 +96,20 @@ def login_user():
 @app.route("/get_jobs", methods = ["POST"])
 def submit_job_search():
     
-    # get the current user id
-    curr_user = get_current_user()
-    user_id = curr_user['id']
+    # # get the current user id
+    # curr_user = get_current_user()
+    # user_id = curr_user['id']
     
     # Extract job role and location from the form data
     data = request.get_json()
     job_role = data['job_role']
     job_location = data['job_location']
     
-    # stored the user's resume for OCR 
-    file = request.files['file']
-    path = pathlib.Path().absolute()
-    resume = f'{path}/Resumes/{user_id}.pdf'
-    file.save(resume)
+    # # stored the user's resume for OCR 
+    # file = request.files['file']
+    # path = pathlib.Path().absolute()
+    # resume = f'{path}/Resumes/resume.pdf'
+    # file.save(resume)
     
     # Initialize the job scraper and fetch jobs
     scrapper = FetchJobs()
@@ -120,16 +120,16 @@ def submit_job_search():
     return { "details" : jobs } 
     
      
-@app.route('/generate_email', methods = ['POST'])
+@app.route('/generate_email', methods = [ 'GET' ,'POST'])
 def generate_email():
     
     # get the user's input
-    data = request.get_json()
-    job_url = data['job_url']
-    
+    data = request.json
+    job_url = data.get('email')
+
     # fetch the current user userid
-    curr_user = get_current_user()
-    userID = curr_user['id']
+    # curr_user = get_current_user()
+    # userID = curr_user['id']
     
     # scrap the description of the industry he want to apply for 
     scrapper = FetchJobs()
@@ -138,33 +138,31 @@ def generate_email():
     
     # Optical Character Recognition (OCR) is performed here
     path = pathlib.Path().absolute()
-    resume = f'{path}/Resumes/{userID}.pdf'
+    # resume = f'{path}/Resumes/{userID}.pdf'
     scanner = ScannedPDF()
-    user_resume_details = scanner.OCRpdf(resume)
+    # user_resume_details = scanner.OCRpdf(resume)
     
     # cretat the final Prompt
     final_prompt = f'''
         Company Description : {industry_description}
             
-        User Resume details : {user_resume_details}      
+        User Resume details :      
         
         Generate an email template for a job seeker expressing interest in a specific job position. The email should include the sender's name, email address, the position they are applying for, a brief introduction highlighting their relevant skills and experiences, and a closing statement expressing enthusiasm for the opportunity. The email should be professional, concise, and tailored to the specific job listing.
         
         now covert the generated email into python dictionary in format make sure no more key should be formed,a and must follow the format as given bellow, no key should be replace with any of the other word
-                {'sender_name' : 'its content',
+                'sender_name' : 'its content',
                 'sender_email' : 'its value',
                 'subject' : 'its value',
                 'salutation' : 'its value',
                 'body' : 'its value',
-                }
     '''
     
     # generate the final email
     E_gen = email_generation()
     email = E_gen.generate_response(final_prompt)
-    print(email)
     
-    return email
+    return { "email" : email }
     
 if __name__ == '__main__':
     app.run(debug=True)

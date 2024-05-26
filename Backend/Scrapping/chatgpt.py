@@ -27,10 +27,10 @@ class email_generation:
         print(text_message)
         
         modified_text_message = text_message.replace("'", '"')
-        modified_text_message = modified_text_message.replace('\n',' ')
+        # modified_text_message = modified_text_message.replace('\n',' ')
         
         email_disc = json.loads(modified_text_message)
-        email_disc['body'] = email_disc['body'].replace('\n',' ')
+        # email_disc['body'] = email_disc['body'].replace('\n',' ')
         
         return email_disc
     
