@@ -50,12 +50,12 @@ https://github.com/MadMax1311/JobLinker/assets/123349721/ad76f129-8fd0-45d1-ad7c
 1. Install all the dependencies
      ```bash
    pip install requirements.txt
-Note : In case some module not install you have to install it manually.
+Note : If some modules are not installed, you have to install them manually.
 
 2. Install the redis, you can install it from our git repo itself 
    [@chetan](https://github.com/amMistic)
    
-3. To run the Backend sever, run the given command in you terminal
+3. To run the Backend sever, run the given command in your terminal
      ```bash
     python -m Backend.app
 
@@ -80,4 +80,4 @@ Note: The command "python -m Backend.app" seems to be attempting to run a Python
 - **API Documentation:** OpenAPI
 
 ## About us
-JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and help all users for generate E-mail.
+JobLinker is developed by ![@chetan](https://github.com/amMistic), ![@abhishek](https://github.com/MazeJack), ![@shyam](https://github.com/MadMax1311) and ![@hitesh](https://github.com/chavdahitesh06) in HaachTheFall 4.0. Our mission is to create inclusive solutions that enhance accessibility and help all users generate E-mail.
